@@ -27,12 +27,6 @@ public class CustomerSignIn {
 	private void initialize() {
 		frame = new JFrame();
 		frame.getContentPane().setBackground(new Color(135, 206, 250));
-		frame.setBounds(100, 100, 450, 300);
-		frame.setVisible(true);
-		frame.setLocationRelativeTo(null); 
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setResizable(false);
-		frame.setBounds(0, 0, 1500, 900);
 		frame.getContentPane().setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("New label");
@@ -70,8 +64,8 @@ public class CustomerSignIn {
 		JButton btnCancel = new JButton("Cancel");
 		btnCancel.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-//				new Welcome_Screen();
-//				frame.dispose();
+				new Welcome_Screen();
+				frame.dispose();
 			}
 		});
 		btnCancel.setFont(new Font("Tahoma", Font.PLAIN, 28));
@@ -79,5 +73,10 @@ public class CustomerSignIn {
 		btnCancel.setBounds(802, 721, 210, 81);
 		frame.getContentPane().add(btnCancel);
 
+		frame.setBounds(0, 0, 1500, 900);
+		frame.setVisible(true);
+		frame.setResizable(false);
+		frame.setLocationRelativeTo(null);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 }

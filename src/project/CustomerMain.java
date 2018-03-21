@@ -39,7 +39,6 @@ public class CustomerMain {
 		frame = new JFrame();
 		frame.getContentPane().setBackground(new Color(245, 236, 85));
 		frame.getContentPane().setLayout(null);
-		frame.setLocationRelativeTo(null);
 		
 		JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
 		tabbedPane.setBackground(new Color(135, 206, 250));
@@ -90,13 +89,13 @@ public class CustomerMain {
 		
 		JLabel lblNewLabel_5 = new JLabel("New label");
 		lblNewLabel_5.setIcon(new ImageIcon(CustomerMain.class.getResource("/project/car.png")));
-		lblNewLabel_5.setBounds(879, 26, 289, 202);
+		lblNewLabel_5.setBounds(664, 26, 504, 296);
 		panel.add(lblNewLabel_5);
 		
 		JTextPane txtpnSendMessageTo = new JTextPane();
 		txtpnSendMessageTo.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		txtpnSendMessageTo.setText("Send Message to Mechanic");
-		txtpnSendMessageTo.setBounds(821, 255, 347, 123);
+		txtpnSendMessageTo.setBounds(821, 346, 347, 123);
 		panel.add(txtpnSendMessageTo);
 		
 		JButton btnNewButton_1 = new JButton("Send");
@@ -107,7 +106,7 @@ public class CustomerMain {
 		});
 		btnNewButton_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		btnNewButton_1.setBackground(new Color(70, 130, 180));
-		btnNewButton_1.setBounds(1072, 391, 97, 25);
+		btnNewButton_1.setBounds(1069, 490, 97, 25);
 		panel.add(btnNewButton_1);
 		
 		JLabel lblOilChange = new JLabel("Oil Change");
@@ -137,13 +136,14 @@ public class CustomerMain {
 		JLabel lblNewLabel_7 = new JLabel("<html><div align=\"right\">Time Waiting: 22 minutes <br>\r\nTime Since Work Began: 15 minutes");
 		lblNewLabel_7.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		lblNewLabel_7.setHorizontalAlignment(SwingConstants.TRAILING);
-		lblNewLabel_7.setBounds(736, 490, 432, 52);
+		lblNewLabel_7.setBounds(737, 555, 432, 52);
 		panel.add(lblNewLabel_7);
 		
 		JButton btnNewButton_2 = new JButton("Receive Bill");
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+				new ReceiveBillScreen();
+				frame.dispose();
 			}
 		});
 		btnNewButton_2.setBackground(new Color(70, 130, 180));
@@ -156,12 +156,6 @@ public class CustomerMain {
 		lblNewLabel.setIcon(new ImageIcon(CustomerMain.class.getResource("/project/logo_small.png")));
 		lblNewLabel.setBounds(12, 13, 257, 130);
 		frame.getContentPane().add(lblNewLabel);
-		
-		DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
-		Calendar cal = Calendar.getInstance(); 
-		JLabel lblNewLabel_1 = new JLabel(dateFormat.format(cal));
-		lblNewLabel_1.setBounds(1334, 68, 148, 16);
-		frame.getContentPane().add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("<html><center> Service Has Not <br> Started ");
 		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 18));
@@ -184,8 +178,8 @@ public class CustomerMain {
 		JButton btnNewButton = new JButton("Sign Out");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-//				new Window_Screen(); 
-//				frame.dispose();
+				new Welcome_Screen(); 
+				frame.dispose();
 			}
 		});
 		btnNewButton.setBackground(new Color(135, 206, 250));
@@ -195,8 +189,10 @@ public class CustomerMain {
 		frame.setBounds(100, 100, 450, 300);
 		
 		
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setResizable(false);
 		frame.setBounds(0, 0, 1500, 900);
+		frame.setVisible(true);
+		frame.setResizable(false);
+		frame.setLocationRelativeTo(null);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 }

@@ -86,13 +86,19 @@ public class Mechanic_Main_Screen {
 		label_4.setBounds(20, 412, 70, 70);
 		frame.getContentPane().add(label_4);
 		
-		JButton btnNewButton = new JButton("Add New Vehicle");
+		JButton btnNewButton = new JButton("<html><center>Add New<br>Vehicle");
 		btnNewButton.setBackground(new Color(135, 206, 250));
 		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 28));
 		btnNewButton.setBounds(20, 530, 240, 120);
 		frame.getContentPane().add(btnNewButton);
 		
 		JButton btnSignOut = new JButton("Sign Out");
+		btnSignOut.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				new Welcome_Screen();
+				frame.dispose(); 
+			}
+		});
 		btnSignOut.setBackground(new Color(135, 206, 250));
 		btnSignOut.setFont(new Font("Tahoma", Font.PLAIN, 28));
 		btnSignOut.setBounds(20, 800, 240, 50);
