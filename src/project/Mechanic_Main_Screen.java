@@ -94,9 +94,9 @@ public class Mechanic_Main_Screen {
 		
 		JButton btnSignOut = new JButton("Sign Out");
 		btnSignOut.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
+			public void actionPerformed(ActionEvent e) {
 				new Welcome_Screen();
-				frame.dispose(); 
+				frame.dispose();
 			}
 		});
 		btnSignOut.setBackground(new Color(135, 206, 250));
@@ -168,13 +168,40 @@ public class Mechanic_Main_Screen {
 		panel.add(lblNewLabel_2);
 		
 		JButton btnBegin = new JButton("Begin");
+		btnBegin.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JButton btnComplete1 = new JButton("Complete");
+				btnComplete1.setFont(new Font("Tahoma", Font.PLAIN, 24));
+				btnComplete1.setBackground(new Color(0, 191, 255));
+				btnComplete1.setBounds(425, 310, 150, 50);
+				label_1.setIcon(new ImageIcon(Mechanic_Main_Screen.class.getResource("/project/startedImage.png")));
+				btnBegin.setVisible(false);
+				
+				btnComplete1.addActionListener(new ActionListener() {
+
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						btnComplete1.setVisible(false);
+						label_1.setIcon(new ImageIcon(Mechanic_Main_Screen.class.getResource("/project/finishedImage.png")));
+						JButton btnDone1 = new JButton("Done!");
+						btnDone1.setFont(new Font("Tahoma", Font.PLAIN, 24));
+						btnDone1.setEnabled(false);
+						btnDone1.setBackground(new Color(192, 192, 192));
+						btnDone1.setBounds(425, 310, 150, 50);
+						panel.add(btnDone1);
+					}
+					
+				});
+				panel.add(btnComplete1);
+			}
+		});
 		btnBegin.setFont(new Font("Tahoma", Font.PLAIN, 24));
 		btnBegin.setBackground(new Color(70, 130, 180));
 		btnBegin.setBounds(425, 310, 150, 50);
 		panel.add(btnBegin);
 		
 		JLabel label_3 = new JLabel("");
-		label_3.setIcon(new ImageIcon(Mechanic_Main_Screen.class.getResource("/project/finishedImage.png")));
+		label_3.setIcon(new ImageIcon(Mechanic_Main_Screen.class.getResource("/project/unstartedImage.png")));
 		label_3.setBounds(35, 381, 70, 70);
 		panel.add(label_3);
 		
@@ -183,15 +210,41 @@ public class Mechanic_Main_Screen {
 		lblChangeWiperBlades.setBounds(115, 381, 300, 70);
 		panel.add(lblChangeWiperBlades);
 		
-		JButton btnDone = new JButton("Done!");
+		JButton btnDone = new JButton("Begin");
+		btnDone.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JButton btnComplete2 = new JButton("Complete");
+				btnComplete2.setFont(new Font("Tahoma", Font.PLAIN, 24));
+				btnComplete2.setBackground(new Color(0, 191, 255));
+				btnComplete2.setBounds(425, 391, 150, 50);
+				label_3.setIcon(new ImageIcon(Mechanic_Main_Screen.class.getResource("/project/startedImage.png")));
+				btnDone.setVisible(false);
+				
+				btnComplete2.addActionListener(new ActionListener() {
+
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						btnComplete2.setVisible(false);
+						label_3.setIcon(new ImageIcon(Mechanic_Main_Screen.class.getResource("/project/finishedImage.png")));
+						JButton btnDone2 = new JButton("Done!");
+						btnDone2.setFont(new Font("Tahoma", Font.PLAIN, 24));
+						btnDone2.setEnabled(false);
+						btnDone2.setBackground(new Color(192, 192, 192));
+						btnDone2.setBounds(425, 391, 150, 50);
+						panel.add(btnDone2);
+					}
+					
+				});
+				panel.add(btnComplete2);
+			}
+		});
 		btnDone.setFont(new Font("Tahoma", Font.PLAIN, 24));
-		btnDone.setEnabled(false);
-		btnDone.setBackground(new Color(192, 192, 192));
+		btnDone.setBackground(new Color(70, 130, 180));
 		btnDone.setBounds(425, 391, 150, 50);
 		panel.add(btnDone);
 		
 		JLabel label_6 = new JLabel("");
-		label_6.setIcon(new ImageIcon(Mechanic_Main_Screen.class.getResource("/project/startedImage.png")));
+		label_6.setIcon(new ImageIcon(Mechanic_Main_Screen.class.getResource("/project/unstartedImage.png")));
 		label_6.setBounds(35, 462, 70, 70);
 		panel.add(label_6);
 		
@@ -200,9 +253,36 @@ public class Mechanic_Main_Screen {
 		lblChangeBrakePads.setBounds(115, 462, 300, 70);
 		panel.add(lblChangeBrakePads);
 		
-		JButton btnComplete = new JButton("Complete");
+		JButton btnComplete = new JButton("Begin");
+		btnComplete.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JButton btnComplete3 = new JButton("Complete");
+				btnComplete3.setFont(new Font("Tahoma", Font.PLAIN, 24));
+				btnComplete3.setBackground(new Color(0, 191, 255));
+				btnComplete3.setBounds(425, 472, 150, 50);
+				label_6.setIcon(new ImageIcon(Mechanic_Main_Screen.class.getResource("/project/startedImage.png")));
+				btnComplete.setVisible(false);
+				
+				btnComplete3.addActionListener(new ActionListener() {
+
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						btnComplete3.setVisible(false);
+						label_6.setIcon(new ImageIcon(Mechanic_Main_Screen.class.getResource("/project/finishedImage.png")));
+						JButton btnDone3 = new JButton("Done!");
+						btnDone3.setFont(new Font("Tahoma", Font.PLAIN, 24));
+						btnDone3.setEnabled(false);
+						btnDone3.setBackground(new Color(192, 192, 192));
+						btnDone3.setBounds(425, 472, 150, 50);
+						panel.add(btnDone3);
+					}
+					
+				});
+				panel.add(btnComplete3);
+			}
+		});
 		btnComplete.setFont(new Font("Tahoma", Font.PLAIN, 24));
-		btnComplete.setBackground(new Color(0, 191, 255));
+		btnComplete.setBackground(new Color(70, 130, 180));
 		btnComplete.setBounds(425, 472, 150, 50);
 		panel.add(btnComplete);
 		
@@ -217,6 +297,33 @@ public class Mechanic_Main_Screen {
 		panel.add(lblPerformStateInspection);
 		
 		JButton button_2 = new JButton("Begin");
+		button_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JButton button_4 = new JButton("Complete");
+				button_4.setFont(new Font("Tahoma", Font.PLAIN, 24));
+				button_4.setBackground(new Color(0, 191, 255));
+				button_4.setBounds(425, 553, 150, 50);
+				label_8.setIcon(new ImageIcon(Mechanic_Main_Screen.class.getResource("/project/startedImage.png")));
+				button_2.setVisible(false);
+				
+				button_4.addActionListener(new ActionListener() {
+
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						button_4.setVisible(false);
+						label_8.setIcon(new ImageIcon(Mechanic_Main_Screen.class.getResource("/project/finishedImage.png")));
+						JButton btnDone4 = new JButton("Done!");
+						btnDone4.setFont(new Font("Tahoma", Font.PLAIN, 24));
+						btnDone4.setEnabled(false);
+						btnDone4.setBackground(new Color(192, 192, 192));
+						btnDone4.setBounds(425, 553, 150, 50);
+						panel.add(btnDone4);
+					}
+					
+				});
+				panel.add(button_4);
+			}
+		});
 		button_2.setFont(new Font("Tahoma", Font.PLAIN, 24));
 		button_2.setBackground(new Color(70, 130, 180));
 		button_2.setBounds(425, 553, 150, 50);
