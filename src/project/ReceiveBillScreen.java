@@ -39,44 +39,28 @@ public class ReceiveBillScreen {
 		logoLable.setBounds(550, 100, 400, 200);
 		frame.getContentPane().add(logoLable);
 		
-		JLabel lblNewLabel = new JLabel("<html><center> Welcome to Gary's Garage, <br> your one stop shop for vehicle <br>service and repairs! <br>Please Sign in below!<br> <br> Are you a:");
+		JLabel lblNewLabel = new JLabel("<html><center> Thank you for choosing Gary's Garage! <br> Your total today is $65.27. <br> Please pay at the front desk.");
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 28));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setVerticalAlignment(SwingConstants.TOP);
-		lblNewLabel.setBounds(550, 350, 400, 225);
+		lblNewLabel.setBounds(550, 364, 400, 150);
 		frame.getContentPane().add(lblNewLabel);
 		
-		JButton btnMechanic = new JButton("Mechanic");
+		JButton btnMechanic = new JButton("Done");
 		btnMechanic.setFont(new Font("Tahoma", Font.PLAIN, 28));
 		btnMechanic.setBackground(new Color(245, 236, 86));
-		btnMechanic.setBounds(400, 650, 300, 150);
+		btnMechanic.setBounds(597, 649, 300, 150);
 		
 		btnMechanic.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				new Mechanic_Login();
-				frame.dispose();
+				new Welcome_Screen();
+				frame.dispose(); 
 			}
 			
 		});
 		frame.getContentPane().add(btnMechanic);
-		
-		JButton btnCustomer = new JButton("Customer");
-		btnCustomer.setFont(new Font("Tahoma", Font.PLAIN, 28));
-		btnCustomer.setBackground(new Color(245, 236, 85));
-		btnCustomer.setBounds(835, 650, 300, 150);
-		
-		btnCustomer.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				new CustomerSignIn();
-				frame.dispose();
-			}
-			
-		});
-		frame.getContentPane().add(btnCustomer);
 		
 		frame.setBounds(0, 0, 1500, 900);
 		frame.setVisible(true);
