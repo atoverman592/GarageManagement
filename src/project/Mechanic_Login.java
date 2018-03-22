@@ -9,6 +9,7 @@ import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.SwingConstants;
 import javax.swing.JTextField;
 import javax.swing.JPasswordField;
@@ -75,8 +76,17 @@ public class Mechanic_Login {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				new Mechanic_Main_Screen();
-				frame.dispose();
+				String username = txtUsername.getText();
+				String password = new String(passwordField.getPassword());
+				int numPassword = Integer.parseInt(password); 
+					if (username.equals("Gary") && numPassword == 1234) {
+						new Mechanic_Main_Screen();
+						frame.dispose();
+					}
+					else {
+						JOptionPane.showMessageDialog(frame, "Invalid Username/Password.", "Login Error", JOptionPane.WARNING_MESSAGE);
+					}
+
 			}
 			
 		});

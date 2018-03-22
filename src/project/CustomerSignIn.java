@@ -1,6 +1,7 @@
 package project;
 
 import java.awt.EventQueue;
+import javax.swing.JOptionPane; 
 
 import javax.swing.JFrame;
 import java.awt.Color;
@@ -52,8 +53,14 @@ public class CustomerSignIn {
 		JButton btnNewButton = new JButton("Log In");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				new CustomerMain();
-				frame.dispose();
+				int login = Integer.parseInt(textField.getText()); 
+					if (login == 1234) {
+						new CustomerMain();
+						frame.dispose();
+					}
+					else {
+						JOptionPane.showMessageDialog(frame, "Invalid Customer Code.", "Login Error", JOptionPane.WARNING_MESSAGE);
+					}
 			}
 		});
 		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 28));
