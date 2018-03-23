@@ -45,7 +45,7 @@ public class Welcome_Screen {
 		logoLable.setBounds(550, 100, 400, 200);
 		frame.getContentPane().add(logoLable);
 		
-		JLabel lblNewLabel = new JLabel("<html><center> Welcome to Gary's Garage, <br> your one stop shop for vehicle <br>service and repairs! <br>Please Sign in below!<br> <br> Are you a:");
+		JLabel lblNewLabel = new JLabel("<html><center> Welcome to Gary's Garage, <br> your one stop shop for vehicle <br>service and repairs! <br>Please sign in below!<br> <br> Are you a:");
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 28));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setVerticalAlignment(SwingConstants.TOP);

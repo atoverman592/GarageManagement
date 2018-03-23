@@ -87,6 +87,12 @@ public class Mechanic_Main_Screen {
 		frame.getContentPane().add(label_4);
 		
 		JButton btnNewButton = new JButton("<html><center>Add New<br>Vehicle");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new AddVehicleScreen();
+				frame.dispose(); 
+			}
+		});
 		btnNewButton.setBackground(new Color(135, 206, 250));
 		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 28));
 		btnNewButton.setBounds(20, 530, 240, 120);
