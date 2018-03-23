@@ -367,6 +367,11 @@ public class Mechanic_Main_Screen {
 		panel.add(lblEstimatedTotal);
 		
 		JButton btnSendBill = new JButton("Send bill");
+		btnSendBill.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				lblEstimatedTotal.setText("Bill Sent to Customer");
+			}
+		});
 		btnSendBill.setBackground(new Color(135, 206, 235));
 		btnSendBill.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		btnSendBill.setBounds(125, 672, 155, 50);
