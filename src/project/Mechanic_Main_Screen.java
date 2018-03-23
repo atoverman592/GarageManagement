@@ -160,7 +160,7 @@ public class Mechanic_Main_Screen {
 		
 		JLabel lblNewLabel_1 = new JLabel("New label");
 		lblNewLabel_1.setIcon(new ImageIcon(Mechanic_Main_Screen.class.getResource("/project/car.png")));
-		lblNewLabel_1.setBounds(655, 35, 475, 275);
+		lblNewLabel_1.setBounds(655, 35, 506, 275);
 		panel.add(lblNewLabel_1);
 		
 		JLabel label_1 = new JLabel("");
@@ -338,13 +338,13 @@ public class Mechanic_Main_Screen {
 		JTextPane txtpnSendMessageTo = new JTextPane();
 		txtpnSendMessageTo.setText("Send Message to Customer");
 		txtpnSendMessageTo.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		txtpnSendMessageTo.setBounds(700, 325, 430, 129);
+		txtpnSendMessageTo.setBounds(731, 323, 430, 129);
 		panel.add(txtpnSendMessageTo);
 		
 		JButton btnNewButton_1 = new JButton("Send");
 		btnNewButton_1.setBackground(new Color(135, 206, 235));
 		btnNewButton_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		btnNewButton_1.setBounds(1025, 462, 110, 30);
+		btnNewButton_1.setBounds(1051, 462, 110, 30);
 		btnNewButton_1.addActionListener(new ActionListener() {
 
 			@Override
@@ -358,7 +358,7 @@ public class Mechanic_Main_Screen {
 		JLabel lblCustomerIsIn = new JLabel("<html><div align=\"right\">Customer is in Waiting Room<br><br><br>Time Waiting: 22 minutes<br>Time Since Work Began: 15 minutes");
 		lblCustomerIsIn.setHorizontalAlignment(SwingConstants.TRAILING);
 		lblCustomerIsIn.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lblCustomerIsIn.setBounds(700, 518, 430, 155);
+		lblCustomerIsIn.setBounds(731, 518, 430, 155);
 		panel.add(lblCustomerIsIn);
 		
 		JLabel lblEstimatedTotal = new JLabel("Estimated Total: $ 65.27");

@@ -42,7 +42,7 @@ public class CustomerMain {
 		
 		JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
 		tabbedPane.setBackground(new Color(135, 206, 250));
-		tabbedPane.setBounds(281, 130, 1201, 722);
+		tabbedPane.setBounds(281, 46, 1201, 806);
 		frame.getContentPane().add(tabbedPane);
 		
 		JPanel panel = new JPanel();
@@ -95,7 +95,7 @@ public class CustomerMain {
 		JTextPane txtpnSendMessageTo = new JTextPane();
 		txtpnSendMessageTo.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		txtpnSendMessageTo.setText("Send Message to Mechanic");
-		txtpnSendMessageTo.setBounds(821, 346, 347, 123);
+		txtpnSendMessageTo.setBounds(820, 335, 347, 123);
 		panel.add(txtpnSendMessageTo);
 		
 		JButton btnNewButton_1 = new JButton("Send");
@@ -106,37 +106,37 @@ public class CustomerMain {
 		});
 		btnNewButton_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		btnNewButton_1.setBackground(new Color(70, 130, 180));
-		btnNewButton_1.setBounds(1069, 490, 97, 25);
+		btnNewButton_1.setBounds(1071, 471, 97, 25);
 		panel.add(btnNewButton_1);
 		
 		JLabel lblOilChange = new JLabel("Oil Change");
 		lblOilChange.setIcon(new ImageIcon(CustomerMain.class.getResource("/project/unstartedImage.png")));
 		lblOilChange.setFont(new Font("Tahoma", Font.PLAIN, 24));
-		lblOilChange.setBounds(26, 283, 240, 58);
+		lblOilChange.setBounds(26, 315, 240, 58);
 		panel.add(lblOilChange);
 		
 		JLabel lblChangeWiperBlades = new JLabel("Check Wiper Blades");
 		lblChangeWiperBlades.setIcon(new ImageIcon(CustomerMain.class.getResource("/project/finishedImage.png")));
 		lblChangeWiperBlades.setFont(new Font("Tahoma", Font.PLAIN, 24));
-		lblChangeWiperBlades.setBounds(26, 346, 315, 70);
+		lblChangeWiperBlades.setBounds(26, 378, 315, 70);
 		panel.add(lblChangeWiperBlades);
 		
 		JLabel lblCheckBrakePads = new JLabel("Check Brake Pads");
 		lblCheckBrakePads.setIcon(new ImageIcon(CustomerMain.class.getResource("/project/startedImage.png")));
 		lblCheckBrakePads.setFont(new Font("Tahoma", Font.PLAIN, 24));
-		lblCheckBrakePads.setBounds(26, 425, 327, 52);
+		lblCheckBrakePads.setBounds(26, 457, 327, 52);
 		panel.add(lblCheckBrakePads);
 		
 		JLabel lblPerformStateInspection = new JLabel("Rotate Tires");
 		lblPerformStateInspection.setIcon(new ImageIcon(CustomerMain.class.getResource("/project/unstartedImage.png")));
 		lblPerformStateInspection.setFont(new Font("Tahoma", Font.PLAIN, 24));
-		lblPerformStateInspection.setBounds(26, 490, 447, 58);
+		lblPerformStateInspection.setBounds(26, 522, 447, 58);
 		panel.add(lblPerformStateInspection);
 		
 		JLabel lblNewLabel_7 = new JLabel("<html><div align=\"right\">Time Waiting: 22 minutes <br>\r\nTime Since Work Began: 15 minutes");
 		lblNewLabel_7.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		lblNewLabel_7.setHorizontalAlignment(SwingConstants.TRAILING);
-		lblNewLabel_7.setBounds(737, 555, 432, 52);
+		lblNewLabel_7.setBounds(734, 579, 432, 52);
 		panel.add(lblNewLabel_7);
 		
 		JButton btnNewButton_2 = new JButton("Receive Bill");
@@ -148,7 +148,7 @@ public class CustomerMain {
 		});
 		btnNewButton_2.setBackground(new Color(70, 130, 180));
 		btnNewButton_2.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		btnNewButton_2.setBounds(513, 621, 217, 58);
+		btnNewButton_2.setBounds(501, 705, 217, 58);
 		panel.add(btnNewButton_2);
 		tabbedPane.setBackgroundAt(0, new Color(135, 206, 250));
 		
